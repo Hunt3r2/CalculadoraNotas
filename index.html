@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Notas</h1>
+
+        <!-- Formulario para añadir una nueva columna -->
+        <div>
+            <label for="columna">Nombre de la Asignatura:</label>
+            <input type="text" id="columna" placeholder="Nombre de la asignatura">
+            <label for="porcentaje">Porcentaje:</label>
+            <input type="number" id="porcentaje" placeholder="Porcentaje" min="0" max="100">
+            <button onclick="agregarColumna()">Añadir columna</button>
+        </div>
+
+        <hr>
+
+        <!-- Tabla para introducir las notas -->
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Estudiante</th>
+                    <!-- Las columnas de asignaturas se agregarán aquí -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de los estudiantes se agregarán aquí -->
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!-- Botón para añadir estudiantes -->
+        <button onclick="agregarEstudiante()">Añadir Estudiante</button>
+
+        <hr>
+
+        <!-- Opciones de exportar e importar -->
+        <div>
+            <button onclick="exportarDatos()">Exportar Datos</button>
+            <input type="file" id="inputArchivo" onchange="importarDatos(event)" />
+        </div>
+    </div>
+
+    <!-- Conectar el archivo JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
